@@ -1,0 +1,407 @@
+{
+  "__content" : [
+    {
+      "scenes" : [
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "F9610871-0955-494F-A5C3-51D1A281BAB3",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
+                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
+                  "8C4C23F4-D12B-45A9-AC34-BD8E8BE627A2" : null,
+                  "580AC528-0AA2-408D-B433-30DB84F781A4" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "diameter",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.5308910608291626
+                          }
+                        ],
+                        [
+                          "height",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0
+                          }
+                        ],
+                        [
+                          "material",
+                          {
+                            "typeName" : "String",
+                            "value" : "standard"
+                          }
+                        ],
+                        [
+                          "type",
+                          {
+                            "typeName" : "String",
+                            "value" : "cylinder"
+                          }
+                        ]
+                      ],
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CoreAssetFactories.PrimitiveShapeAssetFactory",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "6B980757-DDA3-4CC4-8B98-CC800482909B"
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1.6941285133361816,
+                        0,
+                        0,
+                        0,
+                        0,
+                        3.0293378472379118e-07,
+                        1.6941283941268921,
+                        0,
+                        0,
+                        -1.6941283941268921,
+                        3.0293378472379118e-07,
+                        0,
+                        0,
+                        0.049999691545963287,
+                        0.0068646622821688652,
+                        1
+                      ]
+                    }
+                  },
+                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
+                  "8330FC09-C933-4AD5-848E-33A8C46997A5" : null,
+                  "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "HeadBox",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.98929685354232788,
+                  0,
+                  -0.14591655135154724,
+                  0,
+                  -0.071637660264968872,
+                  0.87118786573410034,
+                  -0.48569494485855103,
+                  0,
+                  0.12712074816226959,
+                  0.49094957113265991,
+                  0.86186349391937256,
+                  0,
+                  0.1278606653213501,
+                  0.51768898963928223,
+                  0.86687994003295898,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "6E5D69D8-6274-4352-B96F-B0D2597C8CCA",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "Cube" : null,
+                  "Plate" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "HipsBox",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.88342851400375366,
+                  -0.46856585144996643,
+                  0,
+                  0,
+                  0.46856585144996643,
+                  0.88342851400375366,
+                  0,
+                  -0.052692443132400513,
+                  0.38446110486984253,
+                  0.53412806987762451,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "05AACD29-04C2-4C9B-A733-DE9E512CD452",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "Cube" : null,
+                  "E938F449-9A1C-4AB1-86C6-14DC994A22B6" : null,
+                  "Plate" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "LeftHandBox",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.88347268104553223,
+                  -0.46848264336585999,
+                  0,
+                  0,
+                  0.46848264336585999,
+                  0.88347268104553223,
+                  0,
+                  0.051098469644784927,
+                  0.38439482450485229,
+                  0.5341382622718811,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "8C7C2F6A-196A-4653-BC9B-DE8A889D4FD6",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "Cube" : null,
+                  "DD7E9A4B-4FDF-413F-9163-4BDC6D87E5CE" : null,
+                  "Plate" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "RightHandBox",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.88344568014144897,
+                  -0.46853354573249817,
+                  0,
+                  0,
+                  0.46853354573249817,
+                  0.88344568014144897,
+                  0,
+                  0.051091894507408142,
+                  0.3844260573387146,
+                  0.53412199020385742,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        }
+      ],
+      "tags" : {
+        "__content" : [
+          {
+            "tagsStore" : {
+
+            }
+          }
+        ],
+        "__version" : 1
+      }
+    }
+  ],
+  "__version" : 1
+}
