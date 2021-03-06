@@ -158,3 +158,11 @@ extension Pose {
         return deltaX * deltaY
     }
 }
+
+extension Pose {
+    public func getJointPoint(_ jointName: JointName) -> CGPoint? {
+        return landmarks.filter { (_ Landmark) -> Bool in
+            return Landmark.name == jointName
+        }.first?.location;
+    }
+}
