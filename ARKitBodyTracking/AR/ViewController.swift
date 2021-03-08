@@ -6,6 +6,7 @@
 import UIKit
 import RealityKit
 import ARKit
+import CocoaAsyncSocket
 
 class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet var arView: ARView!
@@ -59,5 +60,18 @@ class ViewController: UIViewController, ARSessionDelegate {
             
             print(p)
         }
+
+        for poseObj in poses {
+            guard poseObj.multiArray != nil else {
+                return
+            }
+            print(poseObj)
+        }
+        
+            
+        print(poses.count)
+
     }
+    
+        
 }
