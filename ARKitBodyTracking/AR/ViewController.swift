@@ -52,6 +52,12 @@ class ViewController: UIViewController, ARSessionDelegate {
             return;
         }
         
-        print(poses.count)
+        poses.forEach { pose in
+            guard let p = pose.getJointPoint(Pose.JointName.neck) else {
+                return
+            }
+            
+            print(p)
+        }
     }
 }
