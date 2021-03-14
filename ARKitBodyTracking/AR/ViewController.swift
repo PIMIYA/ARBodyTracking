@@ -1,8 +1,3 @@
-//
-//  ViewController.swift
-//  AR Guitar
-//
-
 import UIKit
 import RealityKit
 import ARKit
