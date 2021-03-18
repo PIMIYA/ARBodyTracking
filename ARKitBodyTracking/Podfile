@@ -10,6 +10,9 @@ target 'ARDemo' do
   pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
 #  pod 'FirebaseUI/Phone'
 
-  pod 'FacebookSDK'
-  pod 'FacebookSDK/LoginKit'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  
+  pod 'HaishinKit'
 end

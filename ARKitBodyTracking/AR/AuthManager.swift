@@ -3,7 +3,7 @@ import FirebaseUI
 import FBSDKLoginKit
 
 protocol AuthDelegate {
-    func didSigned(_ authManager: AuthManager, error: Error?) -> Void
+    mutating func didSigned(_ authManager: AuthManager, error: Error?) -> Void
 }
 
 class AuthManager: NSObject, FUIAuthDelegate {

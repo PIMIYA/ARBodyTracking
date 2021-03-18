@@ -1,50 +1,85 @@
 import SwiftUI
+import Firebase
+import FBSDKLoginKit
 
 struct LoginSwiftUIView: View {
-    @State var isLogin = false
+    @State var doLogin: Bool = false
+    @State var gotoARScene: Bool = false
     
-    private let authManager = AuthManager()
+    @ObservedObject var userData: UserData
+    private let authManager: AuthManager = AuthManager()
     
     init() {
+        userData = UserData.sharedInstance
         authManager.delegate = self
     }
     
-    var body: some View {
-        VStack {
-            if isUserLogin() {
-                Text("Is Logined")
-            } else {
-                Button(action: {self.isLogin = true}) {
-                    Text("LOGIN")
-                        .padding()
-                        .background(Color.white)
-                }
+    private var DoLoginView: some View {
+        return VStack {
+            Button(action: {self.doLogin = true}) {
+                Text("LOGIN")
+                    .padding()
+                    .background(Color.white)
             }
-        }.sheet(isPresented: self.$isLogin) {
+        }.sheet(isPresented: self.$doLogin) {
             AuthViewController(authUI: self.authManager.authUI)
         }
-        //        .fullScreenCover(isPresented: $isLogin) {
-        //            UIViewWrapper(storyboard: "Storyboard", viewController: "arVC")
-        //        }
+    }
+    
+    private var StartARView: some View {
+        return VStack {
+            Button(action: {self.gotoARScene = true}) {
+                Text("START")
+                    .padding()
+                    .background(Color.white)
+            }
+        }.fullScreenCover(isPresented: $gotoARScene) {
+            UIViewWrapper(storyboard: "Storyboard", viewController: "arVC")
+        }
+    }
+    
+    var body: some View {
+        Group {
+            if userData.isLogin {
+                StartARView
+            } else {
+                DoLoginView
+            }
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
+        .onAppear() {
+            if let currentUser = Auth.auth().currentUser {
+                self.userData.isLogin = true
+                self.userData.uid = currentUser.uid
+                self.userData.displayName = currentUser.displayName ?? "User"
+                self.userData.token = currentUser.refreshToken ?? ""
+                // userData.dump()
+            }
+        }
     }
 }
 
 extension LoginSwiftUIView: AuthDelegate {
-    func didSigned(_ authManager: AuthManager, error: Error?) {
+    mutating func didSigned(_ authManager: AuthManager, error: Error?) {
         if let error = error {
             print("SIGNED ERROR: \(error.localizedDescription)")
+            updateUserLogin(false)
             return
         }
         
-        print("\(authManager.userDisplayName)")
-        
-//        self.userInfo.userName = "\(system.userDisplayName) is signed";
-//        print("\(self.userInfo.userName) == \(system.userDisplayName)")
+        userData.uid = authManager.userId
+        userData.token = authManager.userToken
+        userData.displayName = authManager.userDisplayName
+        updateUserLogin(true)
     }
     
-    func isUserLogin() -> Bool {
-        return false
+    func updateUserLogin(_ target: Bool) -> Void {
+        if(userData.isLogin == target)
+        {
+            return
+        }
+        
+        userData.isLogin.toggle()
     }
 }

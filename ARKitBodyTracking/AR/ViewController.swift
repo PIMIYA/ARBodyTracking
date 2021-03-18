@@ -12,6 +12,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         arView.session.delegate = self
+        UserData.sharedInstance.dump()
     }
     
     private func findPosesInFrame() -> [Pose]? {

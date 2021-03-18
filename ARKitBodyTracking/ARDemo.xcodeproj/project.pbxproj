@@ -10,6 +10,8 @@
 		11E6C22F25F3DEEA004AF22B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 11E6C22E25F3DEEA004AF22B /* Podfile */; };
 		41057A9425F29B9600A97F66 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41057A9325F29B9600A97F66 /* Utilities.swift */; };
 		4110E10225FDF6F4008130EA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110E10125FDF6F4008130EA /* AuthViewController.swift */; };
+		4110E12E2603D754008130EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110E12D2603D754008130EA /* UserData.swift */; };
+		4110E1312603D8C1008130EA /* RtmpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110E1302603D8C1008130EA /* RtmpData.swift */; };
 		412B734125FD0DA100BA1BC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B734025FD0DA100BA1BC3 /* SceneDelegate.swift */; };
 		412B734725FD0E1900BA1BC3 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B734625FD0E1900BA1BC3 /* UIViewWrapper.swift */; };
 		412B734B25FD0F9700BA1BC3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412B734A25FD0F9700BA1BC3 /* Storyboard.storyboard */; };
@@ -22,6 +24,7 @@
 		41B2246625F000C600668B3A /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2246325F000C600668B3A /* Pose+Connection.swift */; };
 		41B2246725F000C600668B3A /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2246425F000C600668B3A /* Pose+Empty.swift */; };
 		41B2246825F000C600668B3A /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2246525F000C600668B3A /* Pose+Landmark.swift */; };
+		41BABF122603DC5900F8B950 /* FbLiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BABF112603DC5900F8B950 /* FbLiveService.swift */; };
 		84C6AA72A40B8B9E4D32E311 /* Pods_ARDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD551E32E94DFB38B331ED82 /* Pods_ARDemo.framework */; };
 		B189442023F1E7B800CA745E /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189441F23F1E7B800CA745E /* MessageLabel.swift */; };
 		B1C2C2D12383B3510093EE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2C2D02383B3510093EE53 /* AppDelegate.swift */; };
@@ -36,6 +39,8 @@
 		1AABEBA8C60D5C2A475A7FE5 /* Pods-ARDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDemo.release.xcconfig"; path = "Target Support Files/Pods-ARDemo/Pods-ARDemo.release.xcconfig"; sourceTree = "<group>"; };
 		41057A9325F29B9600A97F66 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4110E10125FDF6F4008130EA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4110E12D2603D754008130EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		4110E1302603D8C1008130EA /* RtmpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtmpData.swift; sourceTree = "<group>"; };
 		412B734025FD0DA100BA1BC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		412B734625FD0E1900BA1BC3 /* UIViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWrapper.swift; sourceTree = "<group>"; };
 		412B734A25FD0F9700BA1BC3 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		41B2246325F000C600668B3A /* Pose+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		41B2246425F000C600668B3A /* Pose+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
 		41B2246525F000C600668B3A /* Pose+Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
+		41BABF112603DC5900F8B950 /* FbLiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbLiveService.swift; sourceTree = "<group>"; };
 		A2404147026034C69518A6ED /* Pods-ARDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDemo.debug.xcconfig"; path = "Target Support Files/Pods-ARDemo/Pods-ARDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B189441F23F1E7B800CA745E /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 		B1C2C2CD2383B3510093EE53 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +86,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		4110E12C2603D70E008130EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4110E12D2603D754008130EA /* UserData.swift */,
+				4110E1302603D8C1008130EA /* RtmpData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		41B2245D25F0005100668B3A /* Pose */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +104,14 @@
 				41B2245E25F0006100668B3A /* Pose.swift */,
 			);
 			path = Pose;
+			sourceTree = "<group>";
+		};
+		41BABF102603DC2E00F8B950 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				41BABF112603DC5900F8B950 /* FbLiveService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		795105FA118EA787E8D1D3B4 /* Pods */ = {
@@ -122,6 +145,8 @@
 		B1C2C2CF2383B3510093EE53 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				41BABF102603DC2E00F8B950 /* Services */,
+				4110E12C2603D70E008130EA /* Models */,
 				41B2245D25F0005100668B3A /* Pose */,
 				41057A9225F29B7B00A97F66 /* Support */,
 				B1C2C2D92383B3520093EE53 /* Assets.xcassets */,
@@ -290,8 +315,11 @@
 			files = (
 				41B2246725F000C600668B3A /* Pose+Empty.swift in Sources */,
 				B1C2C2D32383B3510093EE53 /* ViewController.swift in Sources */,
+				4110E12E2603D754008130EA /* UserData.swift in Sources */,
+				41BABF122603DC5900F8B950 /* FbLiveService.swift in Sources */,
 				41B2246825F000C600668B3A /* Pose+Landmark.swift in Sources */,
 				412B734725FD0E1900BA1BC3 /* UIViewWrapper.swift in Sources */,
+				4110E1312603D8C1008130EA /* RtmpData.swift in Sources */,
 				B1C2C2D12383B3510093EE53 /* AppDelegate.swift in Sources */,
 				412B735225FD149100BA1BC3 /* HostingController.swift in Sources */,
 				B189442023F1E7B800CA745E /* MessageLabel.swift in Sources */,
