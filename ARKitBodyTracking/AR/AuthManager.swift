@@ -42,7 +42,7 @@ class AuthManager: NSObject, FUIAuthDelegate {
         }
         
         self.userToken = (AccessToken.current?.tokenString ?? "")
-        self.userId = (authDataResult?.user.providerData[0].uid ?? "")
+        self.userId = (authDataResult?.user.uid ?? "")
         self.userDisplayName = (authDataResult?.user.displayName ?? "")
         self.isUserSigned = true
         print("[AccountSystem.authUI]::token: \(self.userToken), uid: \(self.userId), displayName: \(self.userDisplayName)")
