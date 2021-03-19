@@ -1,4 +1,18 @@
 target 'ARDemo' do
   use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
   pod 'CocoaAsyncSocket'
+  
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Auth'
+
+#  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+#  pod 'FirebaseUI/Phone'
+
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  
+  pod 'HaishinKit'
 end
