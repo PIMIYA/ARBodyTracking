@@ -9,12 +9,19 @@
 import SwiftUI
 
 class UserData: ObservableObject {
-    public static let sharedInstance: UserData = UserData()
+    public static let shared: UserData = UserData()
     
     @Published var token: String = ""
     @Published var uid: String = ""
     @Published var displayName: String = ""
     @Published var isLogin: Bool = false
+    
+    public func signOut() -> Void {
+        token = ""
+        uid = ""
+        displayName = ""
+        isLogin = false
+    }
     
     public func dump() -> Void {
         print("Token: \(token)\nUid: \(uid)\nName: \(displayName)\nLogin: \(isLogin)")

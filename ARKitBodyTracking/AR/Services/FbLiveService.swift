@@ -11,7 +11,7 @@ import HaishinKit
 import Network
 
 class FbLiveService: NSObject {
-    public var sharedInstance: FbLiveService = FbLiveService()
+    public static let shared: FbLiveService = FbLiveService()
     
     private let rtmpConnection = RTMPConnection()
     private var rtmpStream: RTMPStream!
@@ -21,7 +21,7 @@ class FbLiveService: NSObject {
         self.rtmpStream = RTMPStream(connection: rtmpConnection)
     }
     
-    func publish(token: String, uid: String, callback: @escaping ((RtmpData)->Void)) -> Void {
+    func publish(token: String, uid: String, callback: @escaping ((RtmpData?)->Void)) -> Void {
         let graphPath = "/\(uid)/live_videos"
         let parameters = [ "status": "LIVE_NOW",
                            "title": "AR SHOW",
@@ -49,10 +49,6 @@ class FbLiveService: NSObject {
             let streamPath = "rtmps://live-api-s.facebook.com:443/rtmp/"
             let streamKey = resultSecureStreamUrl.replacingOccurrences(of: streamPath, with: "")
             
-            //            self.rtmpInfo.videoId = videoId
-            //            self.rtmpInfo.streamPath = streamPath
-            //            self.rtmpInfo.streamKey = streamKey
-            
             print("================ \(streamKey)")
             self.rtmpConnection.requireNetworkFramework = true
             let rtmpConnParams = NWParameters.tls;
@@ -63,6 +59,7 @@ class FbLiveService: NSObject {
             }
             
             guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                callback(nil)
                 #if DEBUG
                 fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
                 #else
@@ -114,6 +111,7 @@ class FbLiveService: NSObject {
             self.rtmpStream.attachAudio(AVCaptureDevice.default(for: AVMediaType.audio),
                                         automaticallyConfiguresApplicationAudioSession: false) { error in
                 print(error.localizedDescription)
+                callback(nil)
                 return
             }
             //            rtmpStream.attachCamera(DeviceUtil.device(withPosition: .back)) { error in

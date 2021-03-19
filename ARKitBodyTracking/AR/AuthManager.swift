@@ -9,8 +9,8 @@ protocol AuthDelegate {
 class AuthManager: NSObject, FUIAuthDelegate {
     public var userToken = ""
     public var userId = ""
-    public var userDisplayName = "";
-    public var authUI: FUIAuth;
+    public var userDisplayName = ""
+    public var authUI: FUIAuth!
     
     private var isUserSigned = false
     public var delegate: AuthDelegate?
@@ -19,13 +19,14 @@ class AuthManager: NSObject, FUIAuthDelegate {
     }
     
     override init() {
-        authUI = FUIAuth.defaultAuthUI()!
         super.init()
         
+        authUI = FUIAuth.defaultAuthUI()!
         authUI.delegate = self
         let providers: [FUIAuthProvider] = [
             FUIFacebookAuth(authUI: authUI,
                             permissions: ["public_profile",
+                                          "publish_video",
                                           "email"
                             ])
         ]
@@ -42,11 +43,15 @@ class AuthManager: NSObject, FUIAuthDelegate {
         }
         
         self.userToken = (AccessToken.current?.tokenString ?? "")
-        self.userId = (authDataResult?.user.uid ?? "")
+        self.userId = (authDataResult?.user.providerData[0].uid ?? "")
         self.userDisplayName = (authDataResult?.user.displayName ?? "")
         self.isUserSigned = true
         print("[AccountSystem.authUI]::token: \(self.userToken), uid: \(self.userId), displayName: \(self.userDisplayName)")
         self.delegate?.didSigned(self, error: nil)
+    }
+    
+    func signOut() {
+        _ = try? authUI.signOut()
     }
     
     @available(iOS 9.0, *)

@@ -10,7 +10,7 @@ struct LoginSwiftUIView: View {
     private let authManager: AuthManager = AuthManager()
     
     init() {
-        userData = UserData.sharedInstance
+        userData = UserData.shared
         authManager.delegate = self
     }
     
@@ -33,6 +33,15 @@ struct LoginSwiftUIView: View {
                     .padding()
                     .background(Color.white)
             }
+            
+            Button(action: {
+                self.authManager.signOut()
+                self.userData.signOut()
+            } , label: {
+                Text("SIGNOUT")
+                    .padding()
+                    .background(Color.gray)
+            })
         }.fullScreenCover(isPresented: $gotoARScene) {
             UIViewWrapper(storyboard: "Storyboard", viewController: "arVC")
         }
@@ -50,11 +59,12 @@ struct LoginSwiftUIView: View {
         .background(Color.black)
         .onAppear() {
             if let currentUser = Auth.auth().currentUser {
-                self.userData.isLogin = true
-                self.userData.uid = currentUser.uid
+                self.userData.uid = currentUser.providerData[0].uid
                 self.userData.displayName = currentUser.displayName ?? "User"
-                self.userData.token = currentUser.refreshToken ?? ""
-                // userData.dump()
+                self.userData.token = AccessToken.current?.tokenString ?? ""
+                
+                self.userData.isLogin = self.userData.token != ""
+                userData.dump()
             }
         }
     }
